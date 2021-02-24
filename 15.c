@@ -36,5 +36,5 @@ void main(){
     printf("Sample rate: %d\n",file1.sample_rate);
     printf("Bits per sample: %d\n",file1.bits_per_sample);
     printf("Number of channels: %d",file1.channels);
-
+    fclose(fptr);
 }
