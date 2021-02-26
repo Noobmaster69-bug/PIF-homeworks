@@ -12,7 +12,11 @@ int main(){
     printf("c= ");
     scanf("%f",&c);
     delta=b*b-4*a*c;
-    x1=(-b-sqrt(delta))/(2*a);
-    x2=(-b+sqrt(delta))/(2*a);
-    printf("x1= %.4f \nx2= %.4f",x1,x2);
+    if(delta<0) printf("No solution");
+    else if (delta == 0) printf("x1=x2= %.4f",-b/(2*a));
+    else{
+        x1=(-b-sqrt(delta))/(2*a);
+        x2=(-b+sqrt(delta))/(2*a);
+        printf("x1= %.4f \nx2= %.4f",x1,x2);
+    }
 }
